@@ -1,0 +1,55 @@
+<div class="example">
+<mat-toolbar>
+    <mat-toolbar-row>
+      <mat-icon (click)="sidenav.toggle()" style="color: whitesmoke; margin-left: -0.5%;">menu</mat-icon>
+      <!-- <h1 style=" letter-spacing: 0.3rem;  cursor: pointer;" routerLink="">Whales</h1> -->
+      <!-- <h1>Todo</h1> -->
+      <img src="../../assets/todo.jpg" routerLink="">
+      <div class="box" *ngIf="service.logged">
+        <form name="search">
+            <input type="text" class="input" name="txt" onmouseout="this.blur();" [(ngModel)]="todoTitle"> 
+        </form>
+        <i ><mat-icon class="search" (click)="search()" routerLink="/alltodos">search</mat-icon></i>
+      </div>
+      <span class="example-spacer"></span>
+     <button mat-icon-button style="margin-right: 10px;"> <mat-icon *ngIf="!service.logged" mat-fab routerLink="register" style="color: whitesmoke">how_to_reg</mat-icon></button>
+      <button mat-button *ngIf="!service.logged" style="background-color: rgb(42, 31, 243); font-family: monospace; border: none; border-radius: 5px; padding: 2px; color:white; letter-spacing: 0.1rem;" routerLink="login">Login</button>
+      <span *ngIf="service.logged" style="color: white; ">{{name}}</span>
+      <button *ngIf="service.logged" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon style="color: whitesmoke;">person</mat-icon>
+        
+      </button>
+      <mat-menu #menu="matMenu">
+        <button  (click)="logout()" mat-menu-item>
+          <mat-icon style="color: red; margin-left: -3px;">close</mat-icon>
+          <span style="color: red;">Sign Out</span>
+        </button>
+        <button (click)="aboutus()" mat-menu-item >
+          <mat-icon style="margin-left: -3px;">info</mat-icon>
+          <span>Enquiry</span>
+        </button>
+        <button routerLink="feedback" mat-menu-item>
+          <mat-icon style="color: blue; margin-left: -3px;">feedback</mat-icon>
+          <span style="color: blue;">FeedBack</span>
+        </button>
+      </mat-menu>
+      <span class="menu-spacer"></span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" opened="opened">
+      <mat-nav-list >
+        <a class="atag" mat-list-item  routerLink="/alltodos" (click)="getAlltodos()"><mat-icon class="maticonsize">view_module</mat-icon> All Todo's <span *ngIf="service.logged" style="margin-left: 5px;">({{length1}})</span> </a>
+        <a class="atag" mat-list-item  routerLink=""><mat-icon> category</mat-icon> My Todo's <span *ngIf="service.logged" style="margin-left: 5px;">({{length1}})</span></a>
+        <a class="atag" mat-list-item routerLink="/addtodos"><mat-icon>add_circle</mat-icon> Add Todo's </a>
+        <a class="atag" mat-list-item  routerLink="/important"><mat-icon>favorite</mat-icon> Important Todo's</a>
+        <a class="atag" mat-list-item  routerLink="/completed"><mat-icon>done</mat-icon> Completed Todo's</a>
+        <a class="atag" mat-list-item  routerLink="/archive"><mat-icon>cloud_done</mat-icon> Archived Todo's </a>
+        <a class="atag" mat-list-item (click)="sidenav.toggle()"  mat-list-item><mat-icon>close</mat-icon>Close</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content style="background-color:  rgb(243, 243, 243);">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

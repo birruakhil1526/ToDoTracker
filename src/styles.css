@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { 
+    height: 100%; 
+}
+body { margin: 0; 
+    background:  rgb(243, 243, 243);
+    font-family: monospace;
+}
+containers{
+    width: 100vw;
+    height: 100vh;
+}
+.mat-simple-snackbar {  
+    font-family: Candara;
+    font-weight: bold;
+    color: white;
+}    
+.mat-simple-snackbar-action > button { 
+    color: rgb(255, 111, 0); 
+}
+

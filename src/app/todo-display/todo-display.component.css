@@ -1,0 +1,154 @@
+.asset{
+    flex: 1 1 auto;
+}
+.expansionpanel{
+  width: 80%;
+  margin-left: 10%;
+  padding-bottom: 10px;
+}
+mat-expansion-panel-header{
+  height: 60px;
+  background-color: rgb(238, 255, 213);
+}
+.button{
+  margin-left: 70%;
+  position: fixed;
+  top:89%
+ 
+}
+.priority{
+  color: red;
+  margin-left: -3%;
+  
+}
+
+
+
+h3{
+    margin-left: 25%;
+    position: absolute;
+}
+h2{
+    margin-left: -0.5%;
+   padding-top: 10px;
+   padding-left: 5px;
+}
+h1{
+  margin-left: 2%;
+  letter-spacing: 0.2rem;
+  font-family: monospace;
+  color: orange;
+  font-size: 3vw;
+  padding-top: 2%;
+  font-weight: 600;
+  text-shadow: 3px 3px navy;
+}
+
+.example-margin{
+    color: green;
+    margin-left: -5%;
+} 
+  .icon{
+    height: 50px;
+    margin-top: -6px;
+  }
+  .left{
+    margin-left: 3%;
+    display: flex;
+    overflow-x: scroll;
+  }
+  p{
+    inline-size: 300px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    font-family: monospace;
+  }
+  /* mat-icon{
+    color: rgb(237, 59, 59);
+  } */
+  h2{
+    font-family: monospace;
+    inline-size: 250px;
+    overflow-wrap: break-word;
+  }
+.icon{
+  margin-top: 5%;
+  margin-right: 2%;
+}
+span{
+  display: flex;
+}
+* {
+  transition: all 0.3s ease-out;
+}
+
+
+
+
+
+.card2 {
+  display: inline-table;
+  top: 0px;
+  position: relative;
+  max-width: 262px;
+  background: rgb(238, 255, 213);
+  border-radius: 10px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 1px solid green;
+  color: navy;
+  height: 200px;
+  }
+
+  .card2:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(182, 241, 142, 0.89);
+    top: -4px;
+    border: none;
+   background-color: rgb(182, 237, 106);
+    color: rgb(0, 0, 0);
+    inline-size: 250px;
+    overflow-wrap: break-word;
+    height: auto;
+    white-space: normal;
+  }
+
+  .card2:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    border: 1px solid green;
+   
+    height: 32px;
+    width: 32px;
+    border-radius: 39px;
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transition: transform 0.20s ease-out;
+  }
+
+  .card2:hover:before {
+    
+    transform: scale(1);
+  }
+  .options{
+    
+    margin-left: 13%;
+  }
+  
+
+
+
+ 
+ 
+
+ 
+
+ 
+  

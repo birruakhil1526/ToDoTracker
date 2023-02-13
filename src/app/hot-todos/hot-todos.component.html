@@ -1,0 +1,14 @@
+<h1 > Important</h1>
+<div class="left">
+  <a class="card2"  *ngFor="let todo of list">
+      <span>
+      <h2>{{todo.todoTitle}}</h2>
+      <mat-icon   style="color: red; margin-top: 3%;" *ngIf="todo.favorite" routerLink="/delete/{{todo.todoTitle}}">highlight_off</mat-icon></span>
+      <mat-card-content>
+        <p><b style="color: rgb(5, 163, 100);">Description : </b>   {{todo.todoDescription}}</p>
+        <p><b style="color: orange;">Category    : </b>   {{todo.category}}</p>
+        <p style="color: rgb(254, 51, 51); text-align: end;"><b>{{todo.dueDate}}</b></p>
+      </mat-card-content>
+    </a>
+  </div>
+  

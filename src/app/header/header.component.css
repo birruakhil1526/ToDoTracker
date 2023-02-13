@@ -1,0 +1,91 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+.example-spacer {
+            flex: 1 1 auto;
+          }
+
+          img{
+            width: 80px;
+            height: 80px;
+            filter: invert(100%);
+           
+          }
+
+mat-icon{
+   margin: 10px;
+        }
+.example{
+  /* position: fixed; */
+  width: 100%;
+  box-shadow: 0px 0px 10px 10px rgba(38, 38, 38, 0.2);
+} 
+mat-sidenav{
+  background-color:  rgb(238, 255, 213);
+  width: 250px; 
+} 
+.atag{
+  color: rgb(0, 0, 51);
+  font-size: small;
+  font-family: monospace;
+}
+.maticonsize{
+ size: 10px;
+}
+mat-toolbar{
+  background:  rgb(35, 60, 22);
+  padding: 7px;  
+  box-shadow: 0px 10px 10px 10px rgba(38, 38, 38, 0.2);
+}
+
+.box{
+  position: absolute;
+  margin-left: 50%;
+}
+.input {
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 2px solid whitesmoke;
+  border-radius: 50px;
+  box-sizing: border-box;
+  font-size: 15px;
+  color: whitesmoke;
+  outline: none;
+  transition: .5s;
+}
+.box:hover input{
+  width: 150px;
+  background: rgb(238, 255, 213);
+  border-radius: 10px;
+  color: rgb(35, 60, 22);
+}
+.box:hover i{
+  color: rgb(35, 60, 22);
+}
+
+.box i{
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translate(40%,-50%);
+  font-size: 26px;
+  color: whitesmoke;;
+  transition: .2s;
+}
+
+mat-sidenav-container {
+  position: fixed;
+  height: 95%;
+  min-height: 95%;
+  width: 100%;
+  min-width: 100%;
+  
+}
+
+
+  
+
+
+
+

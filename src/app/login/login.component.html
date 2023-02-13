@@ -1,0 +1,21 @@
+ <div class="background">
+  </div>
+  <form [formGroup]="loginform">
+    <div >
+    <h3>Login Here.!</h3>
+    <!-- <label for="username">Email*</label> -->
+    <input type="email" placeholder="Email" id="username" formControlName="email">
+    <div *ngIf="email?.invalid &&(email?.dirty||email?.touched)">
+      <div *ngIf="email?.errors?.['required']" class="asset1" >Email is Required</div>
+  </div>
+    <!-- <label for="password">Password*</label> -->
+    <input type="password" placeholder="Password" id="password" formControlName="password">
+    <div *ngIf="password?.invalid &&(password?.dirty||password?.touched)">
+      <div *ngIf="password?.errors?.['required']" class="asset1" >Password is Required</div>
+  </div>
+    <span>
+      <button mat-raised-button style="width: 80px; margin-left: 30%;" [disabled]="loginform.invalid" (click)="OnLogin()">Log In</button>
+      <button mat-button style="width: 80px; background-color: rgb(221, 36, 19); color: white;"  routerLink="/register">Sign Up</button>
+    </span>
+  </div>
+  </form>

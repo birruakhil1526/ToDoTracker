@@ -1,0 +1,39 @@
+.asset1{
+    color: red;
+  }
+  mat-form-field{
+   margin-left: 1%;
+   width: 350px;
+   border:6px black;
+   border: 5px;
+}
+form{
+    margin-left:8% ;
+}
+button{
+    position: fixed;
+    top: 86%;
+    left: 43%;
+    background-color: navy;
+    color: white;
+}
+    mat-card{
+        width: 450px;
+    min-height: 500px;
+        border-radius: 10px;
+        transform: translate(-50%,-55%);
+        top: 50%;
+        left: 50%;
+        background: rgb(238, 255, 213);
+    }
+    h1{
+        text-align: center;
+        font-family: monospace;
+        font-weight: bolder;
+        letter-spacing: 0.025rem;
+        color: navy;
+    }
+    input{
+        color: navy;
+    }
+   

@@ -1,0 +1,49 @@
+<body>
+  <h1>Welcome Home..</h1>
+  <div style="padding: 2%;">
+<div  *ngFor="let cat of categories ">
+<div class="expansionpanel">
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title style="margin-top: 5px; color: navy; font-family: monospace;font-weight: bold;">
+          {{cat}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="left">
+        <div  *ngFor="let todo of todos">
+          <div *ngIf="todo.category==cat ">
+            <div class="card2" >
+          <span><mat-icon class="icon" *ngIf="todo.priority=='High'" style="color: red;">error</mat-icon>
+            <mat-icon class="icon" *ngIf="todo.priority=='Medium'" style="color: orange; " class="icon">error</mat-icon>
+            <mat-icon class="icon" *ngIf="todo.priority=='Low'" style="color: green;" class="icon">error</mat-icon>
+            <h2>{{todo.todoTitle}}</h2></span>
+            <mat-card-content>
+              <p><b style="color: rgb(5, 163, 100);">Description : <p></p></b>   {{todo.todoDescription}}</p>
+              <p><b style="color: orange;">Category    : </b>   {{todo.category}}</p>
+              <!-- <p><b style="color: orange;">Priority    : </b>{{todo.priority}}</p> -->
+              <p style="color: rgb(254, 51, 51); text-align: end;"><b>{{todo.dueDate}}</b></p>
+              <span class="delete"> <mat-icon style="color:blue;" routerLink="/addtodos/{{todo.todoTitle}}">edit</mat-icon>
+                <mat-icon class="options" routerLink="/comp/{{todo.todoTitle}}" (click)="addtoCompletedTodos()" style="color: green;">done</mat-icon>
+                <mat-icon class="options"  style="color: red" *ngIf="!todo.favorite" routerLink="/imp/{{todo.todoTitle}}" (click)="addtoImp()" >favorite_border</mat-icon>
+                <mat-icon class="options"  style="color: red" *ngIf="todo.favorite" routerLink="/delete/{{todo.todoTitle}}">favorite</mat-icon>
+                <mat-icon class="options" routerLink="/archive/{{todo.todoTitle}}" (click)="addtoArchivedTodos()" style="color: orange;">archive</mat-icon>
+                <mat-icon class="options" routerLink="/deletetodo/{{todo.todoTitle}}" style="color: red;" >delete</mat-icon>
+              </span>
+            </mat-card-content>
+          </div>
+          </div>
+          </div>
+        </div>
+    
+      <!-- <jw-pagination [items]="items" (changePage)="onChangePage($event)">ppp</jw-pagination> -->
+
+    </mat-expansion-panel>
+    </mat-accordion>
+</div>
+</div>
+<button class="button" mat-fab (click)="addToTodo()" style="background-color: rgb(3, 51, 0);"  >
+  <mat-icon>add</mat-icon>
+</button>
+</div>
+</body>

@@ -1,0 +1,18 @@
+<h1>Archived</h1>
+<div class="left">
+  <a class="card2"  *ngFor="let todo of deleted">
+      <span>
+      <h2>{{todo.todoTitle}}</h2>
+      <mat-icon style="color: green;" routerLink="/unarchive/{{todo.todoTitle}}">unarchive</mat-icon></span>
+      <mat-card-content>
+        <p><b style="color: rgb(5, 163, 100);">Description : </b>   {{todo.todoDescription}}</p>
+        <p><b style="color: orange;">Category    : </b>   {{todo.category}}</p>
+       
+        <p style="color: rgb(254, 51, 51); text-align: end;"><b>{{todo.dueDate}}</b></p>
+       
+      </mat-card-content>
+    </a>
+  </div>
+
+
+   

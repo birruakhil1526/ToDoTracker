@@ -1,0 +1,18 @@
+<div class="example"><h1>All Todos</h1></div>
+<div class="left">
+  <a class="card2"  *ngFor="let todo of list">
+    <span><mat-icon class="icon" *ngIf="todo.priority=='High'">error</mat-icon>
+      <mat-icon *ngIf="todo.priority=='Medium'" style="color: orange; " class="icon">error</mat-icon>
+      <mat-icon *ngIf="todo.priority=='Low'" style="color: green;" class="icon">error</mat-icon>
+      <h2>{{todo.todoTitle}}</h2></span>
+      <mat-card-content>
+        <p><b style="color: rgb(5, 163, 100);">Description : <p></p></b>   {{todo.todoDescription}}</p>
+        <p><b style="color: orange;">Category    : </b>   {{todo.category}}</p>
+        <!-- <p><b style="color: orange;">Priority    : </b>{{todo.priority}}</p> -->
+        <p style="color: rgb(254, 51, 51); text-align: end; margin-left: -15px;"><b>{{todo.dueDate}}</b></p>
+        <span class="delete"> <mat-icon style="color:blue;" routerLink="/addtodos/{{todo.todoTitle}}">edit</mat-icon>
+          <mat-icon routerLink="/deletetodo/{{todo.todoTitle}}" style="color: red;margin-left: 2%;" >delete_forever</mat-icon></span>
+      </mat-card-content>
+    </a>
+  </div>
+  

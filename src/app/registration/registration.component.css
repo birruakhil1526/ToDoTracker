@@ -1,0 +1,64 @@
+body{
+    /* background: linear-gradient(99.6deg, rgb(112, 128, 152) 10.6%, rgb(242, 227, 234) 32.9%, rgb(234, 202, 213) 52.7%, rgb(220, 227, 239) 72.8%, rgb(185, 205, 227) 81.1%, rgb(154, 180, 212) 102.4%); */
+    /* background: linear-gradient(89.9deg, rgba(178, 253, 238, 0.96) -8.1%, rgb(207, 244, 254) 26.3%, rgba(207, 244, 254, 0.48) 47.5%, rgba(254, 219, 243, 0.63) 61.5%, rgb(254, 219, 243) 78.7%, rgb(254, 207, 210) 109.2%); */
+    /* background: linear-gradient(to right, #ec77ab 0%, #7873f5 100%); */
+    
+}
+.asset1{
+    color: red;
+  }
+  form{
+    font-family: monospace;
+    height: 500px;
+    width: 470px;
+    background: rgb(238, 255, 213);
+    /* background-color: white; */
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 47%;
+    left: 50%;
+    display: flex;
+    border-radius: 10px;
+    /* border: 2px solid rgba(255,255,255,0.1); */
+    border: 1px solid green;
+    padding: 20px 25px;
+}
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: center;
+    font-family: monospace;
+    color:rgba(0, 0, 128, 0.837);
+    font-weight: bolder;
+}
+span{
+    display: flex;
+}
+.names{
+    margin-right: 15px;
+}
+button{
+    margin-left: -55%;
+    cursor: progress;
+    color: white;
+    position: fixed;
+    font-family: monospace;
+    top: 83%;
+}
+h4{
+    margin-left: 10%;
+    color: rgb(210, 47, 47);
+    font-weight: bold;
+    /* margin-left: -55%; */
+    position: fixed;
+    top: 93%;
+    font-family: monospace;
+}
+input{
+    font-family: monospace;
+}
+mat-label{
+    font-family: monospace;
+}
+
